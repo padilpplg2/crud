@@ -13,7 +13,8 @@
         color:white;
     }
     .add{
-        margin-left:60rem;
+        margin-left:50rem;
+        
         position: absolute;
     }
     h1{
@@ -30,6 +31,7 @@
             
             <table class="table">
                 <tr class="table-active">
+                    <th>id</th>
                     <th>Nama</th>
                     <th>Umur</th>
                     <th>Setting</th>
@@ -43,10 +45,11 @@
             ?>
 
                 <tr>
+                    <td><?= $siswa['id']?></td>
                     <td><?= $siswa['nama']?></td>
                     <td><?= $siswa['umur']?></td>
                     <td>
-                        <a href="edit.php?nama=<?= $siswa['nama']?>">
+                        <a href="edit.php?id=<?= $siswa['id']?>">
                         <button type="submit" class="btn btn-success">Edit</button></a>
                         <a href="hapus.php?nama=<?= $siswa['nama']?>">
                         <button type="submit" class="btn btn-danger">Hapus</button></a>
